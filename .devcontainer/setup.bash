@@ -15,4 +15,19 @@ echo 'deb [signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://
 curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg && \
 sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg
 sudo apt update -y && \
-sudo apt install gh bash-completion sshpass sqlite3 temurin-20-jdk zopfli graphicsmagick qrencode zopfli brotli parallel libxml2-utils moreutils yajl-tools nodejs python3-venv -y
+sudo apt install gh bash-completion sshpass sqlite3 temurin-20-jdk zopfli graphicsmagick qrencode zopfli brotli parallel libxml2-utils moreutils yajl-tools nodejs python3-venv -y && \
+mkdir -p /home/vscode/.ssh/ && \
+echo "VerifyHostKeyDNS ask
+ServerAliveInterval 60
+ServerAliveCountMax 10
+TCPKeepAlive no
+
+Host *
+    HostKeyAlgorithms ssh-ed25519
+    PubkeyAcceptedKeyTypes ssh-ed25519
+    KexAlgorithms sntrup761x25519-sha512@openssh.com,curve25519-sha256
+    Ciphers chacha20-poly1305@openssh.com
+    MACs -*
+    User root
+" >> /home/vscode/.ssh/config
+
