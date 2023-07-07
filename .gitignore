@@ -1,0 +1,13 @@
+# Ubuntu Pro key
+.devcontainer/ubuntu_pro
+
+# Git repos
+AttestationServer/
+discuss.grapheneos.org/
+grapheneos.network/
+grapheneos.org/
+grapheneos.social/
+infrastructure/
+mail.grapheneos.org/
+matrix.grapheneos.org/
+ns1.grapheneos.org/
