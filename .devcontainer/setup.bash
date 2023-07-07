@@ -4,7 +4,6 @@ sudo apt update -y && \
 sudo apt upgrade -y && \
 sudo apt install ubuntu-advantage-tools -y && \
 sudo pro attach $UBUNTUPRO && \
-sudo pro enable usg && \
 echo 'deb [signed-by=/usr/share/keyrings/nodesource.asc] https://deb.nodesource.com/node_20.x jammy main' | sudo dd of=/etc/apt/sources.list.d/nodesource.list && \
 curl -fsSL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | sudo dd of=/usr/share/keyrings/nodesource.asc && \
 sudo chmod go+r /usr/share/keyrings/nodesource.asc
