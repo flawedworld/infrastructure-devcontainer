@@ -25,7 +25,7 @@ Host *
     HostKeyAlgorithms ssh-ed25519
     PubkeyAcceptedKeyTypes ssh-ed25519
     KexAlgorithms sntrup761x25519-sha512@openssh.com,curve25519-sha256
-    Ciphers chacha20-poly1305@openssh.com
+    Ciphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com
     MACs -*
     User root
 " >> /home/vscode/.ssh/config
